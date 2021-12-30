@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -x -o pipefail
+
+___main___() {
+    case "${1}" in
+		"--homebrew")
+			dotfiles --homebrew
+		;;
+    esac
+}
+
+___main___ ${@:-}
